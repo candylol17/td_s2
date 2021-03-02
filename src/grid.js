@@ -3,9 +3,8 @@ class Grid {
     constructor() {
         this.rows = 6;
         this.columns = 7;
+
         this.grid = new Array(this.rows);
-
-
         for (let i = 0; i < this.rows; i++) {
             this.grid[i] = new Array(this.columns);
             for(let j = 0; j < this.columns; j++){
@@ -20,7 +19,7 @@ class Grid {
     /* Getters & Setters */
 
     getGrid() {
-        return this.getGrid();
+        return this.grid;
     };
 
     /* Class Methods */

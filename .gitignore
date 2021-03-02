@@ -1,0 +1,7 @@
+### Default excludes ###
+
+node_modules
+
+# IntelliJ files/folders
+
+.idea
