@@ -1,0 +1,17 @@
+{
+  "name": "tdd_cs_puissance4",
+  "version": "1.0.0",
+  "description": "Game: Power 4",
+  "main": "index.js",
+  "scripts": {
+    "testLinux": "NODE_ENV=test mocha --recursive --exit --timeout 10000 --reporter nyan",
+    "testWindows": "set NODE_ENV=test&&mocha --recursive --exit --timeout 10000 --reporter nyan"
+  },
+  "keywords": [],
+  "author": "Maxime TRAN, Candice RUMEAU",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^8.3.0"
+  }
+}
