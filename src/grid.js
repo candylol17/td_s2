@@ -24,17 +24,23 @@ class Grid {
 
     /* Class Methods */
 
-    addToken(row, column, token) {
+    /**
+     * Add current player token inside the grid.
+     * @param row on which the player is playing
+     * @param column on which the player is playing
+     * @param player Current player
+     */
+    addToken(row, column, player) {
         // Check if move is inside the grid perimeter
         if( 0< row && row < this.rows && 0<column && column < this.columns){
-            // Write the token inside the grid
-            this.grid[row][column] = token;
+            if (player.equals("Player1")) {
+                this.grid[row][column] = "R";
+            } else {
+                this.grid[row][column] = "J";
+            }
         }
 
     }
-
-
-
 
 }
 module.exports = Grid;
