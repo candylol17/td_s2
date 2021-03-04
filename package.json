@@ -4,8 +4,8 @@
   "description": "Game: Power 4",
   "main": "index.js",
   "scripts": {
-    "testLinux": "NODE_ENV=test mocha --recursive --exit --timeout 10000 --reporter nyan",
-    "testWindows": "set NODE_ENV=test&&mocha --recursive --exit --timeout 10000 --reporter nyan"
+    "testLinux": "NODE_ENV=test mocha --recursive --exit --timeout 10000",
+    "testWindows": "set NODE_ENV=test&&mocha --recursive --exit --timeout 10000"
   },
   "keywords": [],
   "author": "Maxime TRAN, Candice RUMEAU",

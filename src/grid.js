@@ -7,13 +7,10 @@ class Grid {
         this.grid = new Array(this.rows);
         for (let i = 0; i < this.rows; i++) {
             this.grid[i] = new Array(this.columns);
-            for(let j = 0; j < this.columns; j++){
+            for (let j = 0; j < this.columns; j++) {
                 this.grid[i][j] = " ";
             }
         }
-
-        /*this.tokenA = undefined;
-        this.tokenB = undefined;*/
     }
 
     /* Getters & Setters */
@@ -32,15 +29,22 @@ class Grid {
      */
     addToken(row, column, player) {
         // Check if move is inside the grid perimeter
-        if( 0< row && row < this.rows && 0<column && column < this.columns){
-            if (player.equals("Player1")) {
-                this.grid[row][column] = "R";
+        if (0 < row && row < this.rows && 0 < column && column < this.columns) {
+            if (this.grid[row][column] === "R" || this.grid[row][column] === "J") {
+                if (player === "Player1") {
+                    this.grid[row][column] = "R";
+                } else {
+                    this.grid[row][column] = "J";
+                }
             } else {
-                this.grid[row][column] = "J";
+                throw 'Other player token is already here!';
             }
+        } else {
+            throw 'Your token must be inside the board!';
         }
 
     }
 
 }
+
 module.exports = Grid;
