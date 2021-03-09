@@ -30,7 +30,7 @@ class Grid {
     addToken(row, column, player) {
         // Check if move is inside the grid perimeter
         if (0 < row && row < this.rows && 0 < column && column < this.columns) {
-            if (this.grid[row][column] === "R" || this.grid[row][column] === "J") {
+            if (this.grid[row][column] === " " ) {
                 if (player === "Player1") {
                     this.grid[row][column] = "R";
                 } else {
